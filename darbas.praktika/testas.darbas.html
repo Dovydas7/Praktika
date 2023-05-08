@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Panevėžio apskrities G. Petkevičaitės-Bitės viešoji biblioteka</title>
+
+	
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+		body {
+			background-color: #000;
+			color: #fff;
+			font-family: Arial, sans-serif;
+			font-size: 16px;
+			line-height: 1.5;
+			margin: 0;
+			padding: 0;
+		}
+
+		header {
+			background-color: #333;
+			padding: 10px;
+            
+		}
+
+		h1 {
+			margin: 0;
+			padding: 0;
+		}
+
+		nav {
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+		}
+
+		nav a {
+			color: #fff;
+			text-decoration: none;
+			margin: 0 10px;
+			padding: 5px 10px;
+			border-radius: 5px;
+			transition: background-color 0.2s;
+		}
+
+		nav a:hover {
+			background-color: #fff;
+			color: #000;
+		}
+
+		main {
+			padding: 20px;
+		}
+
+		section {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-around;
+			align-items: center;
+			margin: 40px 0;
+		}
+
+		img {
+			width: 30%;
+			height: auto;
+			border-radius: 5px;
+			box-shadow: 0 0 10px rgba(0,0,0,0.3);
+		}
+
+		footer {
+			background-color: #333;
+			color: #fff;
+			padding: 10px;
+			text-align: center;
+		}
+
+		.about {
+			display: none;
+			margin-top: 40px;
+		}
+
+		.about p {
+			margin: 10px 0;
+		}
+
+		.about.active {
+			display: block;
+		}
+	</style>
+	<script>
+		function toggleAbout() {
+			var about = document.getElementById("about-section");
+			var services = document.getElementById("services-section");
+			
+			about.classList.toggle("active");
+			
+			// Close services section if it is open
+			if (services.classList.contains("active")) {
+				services.classList.remove("active");
+			}
+		}
+		
+		function toggleServices() {
+			var about = document.getElementById("about-section");
+			var services = document.getElementById("services-section");
+			
+			services.classList.toggle("active");
+			
+			// Close about section if it is open
+			if (about.classList.contains("active")) {
+				about.classList.remove("active");
+			}
+		}
+	</script>
+
+<script>
+	function togglePortfolio() {
+		var Portfolio = document.getElementById("Portfolio-section");
+		var Contact = document.getElementById("Contact-section");
+		
+		Portfolio.classList.toggle("active");
+		
+		// Close services section if it is open
+		if (Contact.classList.contains("active")) {
+			Contact.classList.remove("active");
+		}
+	}
+	
+	function toggleContact() {
+		var Portfolio = document.getElementById("Portfolio-section");
+		var Contact = document.getElementById("Contact-section");
+		
+		Contact.classList.toggle("active");
+		
+		// Close about section if it is open
+		if (Portfolio.classList.contains("active")) {
+			Portfolio.classList.remove("active");
+		}
+	}
+</script>
+
+
+</head>
+<body>
+	<header>
+		<h1>Panevėžio apskrities G. Petkevičaitės-Bitės viešoji biblioteka</h1>
+		<nav>
+			<a href="#" href="#" onclick="location.reload()">Perkrauti</a>
+			<a href="#" onclick="toggleAbout()">Apie</a>
+			<a href="#" onclick="toggleServices()">Paslaugos</a>
+			<a href="#" onclick="togglePortfolio()">Knygos</a>
+			<a href="#" onclick="toggleContact()">Kontaktai</a>
+		</nav>
+	</header>
+
+	<main>
+		<h2>Sveiki !</h2>
+		<p>Jus atvykote į G.Petkevičaitės-Bitės bibliotekos susipazinamaji puslapi.</p>
+		<p>Jauskitese nebijodami paskambinti jai islenda kokiu probelumu.</p>
+
+		<section>
+			<img src="bite.jpg.jpg" alt="bite.jpg">
+			<img src="skaitykla.jpg.png" alt="skaitykla.jpg.">
+			<img src="biblioteka.jpg" alt="biblioteka.jpg">
+		</section>
+
+		<section id="about-section" class="about">
+			<h3>Apie mus</h3>
+			<p>G. Petkevičaitės-Bitės viešoji biblioteka, esanti Vilniuje, Lietuvoje.
+				 Ji pavadinta Gabijos Petkevičaitės-Bitės vardu, lietuvių rašytojos ir kultūros aktyvistės, kuri atliko svarbų vaidmenį skatinant lietuvių kalbą ir literatūrą.
+				 
+				Biblioteka buvo įkurta 1919 metais ir nuo tada tapo viena iš didžiausių ir svarbiausių viešųjų bibliotekų Lietuvoje.
+				 Ji siūlo daugybę paslaugų savo lankytojams, įskaitant knygų, žurnalų ir kitų medžiagų skolinimą, taip pat suteikia prieigą prie kompiuterių ir interneto.
+				
+				Bibliotekos kolekcija yra didelė, joje yra daugiau nei 1 milijonas elementų įvairiose jos skyriuose, 
+				įskaitant literatūrą, meną, istoriją, muziką ir daugiau. 
+				Biblioteka taip pat turi specialią retų knygų ir rankraščių kolekciją, kai kurių datavimas siekia XVI amžių.
+				
+				Be jo kolekcijos ir paslaugų, G. Petkevičaitės-Bitės viešoji biblioteka taip pat yra kultūros ir švietimo centras bendruomenei.
+				 Ji organizuoja įvairias renginius, tokius kaip literatūrinius skaitymus, knygų pristatymus ir parodas, taip pat siūlo švietimo programas ir dirbtuves tiek vaikams, tiek suaugusiems.
+				
+				Apskritai, G. Petkevičaitės-Bitės viešoji biblioteka yra svarbi institucija Vilniuje ir visoje Lietuvoje, atliekanti svarbų vaidmenį skatinant raštingumą, švietimą ir kultūrinę sąmoningumą.</p>
+            </section>
+
+            <section id="services-section" class="about">
+                <h3>Kuo mes užsiemame</h3>
+                <p>Mes siulome daugeli dalyku vieni is ju butu:</p>
+                <ul>
+                    <li>Patapu nuoma</li>
+                    <li>Knygu nuoma</li>
+                    <li>Ekskursija aplink biblioteka</li>
+                    <li>Dokumentu kopijavima ir skenavima</li>
+                </ul>
+            </section>
+
+            <section id="Portfolio-section" class="about">
+                <h3>apie musu senasias knygas</h3>
+                <p>Retų knygų fondas bibliotekoje pradėtas kaupti 1989 m.
+					 Tuomet fondo pagrindą sudarė 3000 egz.
+					  tarpukaryje veikusios Panevėžio valstybinės viešosios bibliotekos knygų ir 1969 m. 
+					  įsigytos kalbininko, mokytojo Leono Kuodžio (1902–1975) asmeninės bibliotekos knygos. 
+					  Dabar šį fondą sudaro per 37000 spaudinių, išleistų iki 1945 metų.</p>
+                </section>
+
+                <section id="Contact-section" class="about">
+                    <h3>SUSISIEKITE SU MUMIS</h3>
+                    <p>musu visu kontaktai kad butu lengviau susisiekti</p>
+                    <ul>
+                        <li>laima +3707454755</li>
+                        <li>Algis +3708465396</li>
+                        <li>Petras +3708989213</li>
+                        <li>Jonas +37051112909</li>
+                    </ul>
+                </section>
