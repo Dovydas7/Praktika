@@ -4,9 +4,15 @@
 	<title>Panevėžio apskrities G. Petkevičaitės-Bitės viešoji biblioteka</title>
 
 	
-
+	
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="stylius.css" media="(prefers-color-scheme: dark)">
+	<link rel="stylesheet" href="stylius.css" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)">
+
+	
+	  
+
 	<style>
 		body {
 			background-color: #000;
@@ -143,8 +149,21 @@
 
 
 </head>
-<body>
+
+	
 	<header>
+
+		<button onclick="toggleLightMode()">Switch to light mode</button>
+
+<script>
+    function toggleLightMode() {
+        var body = document.getElementsByTagName("body")[0];
+        body.classList.toggle("light");
+    }
+</script>
+
+		  
+
 		<h1>Panevėžio apskrities G. Petkevičaitės-Bitės viešoji biblioteka</h1>
 		<nav>
 			<a href="#" href="#" onclick="location.reload()">Perkrauti</a>
@@ -154,17 +173,26 @@
 			<a href="#" onclick="toggleContact()">Kontaktai</a>
 		</nav>
 	</header>
+	
 
 	<main>
 		<h2>Sveiki !</h2>
 		<p>Jus atvykote į G.Petkevičaitės-Bitės bibliotekos susipazinamaji puslapi.</p>
 		<p>Jauskitese nebijodami paskambinti jai islenda kokiu probelumu.</p>
+		<p>Paspaude ant vienos iš triju nuotrauku galėsite sužinoti daugiau apie bites biblioteka.</p>
 
 		<section>
-			<img src="bite.jpg.jpg" alt="bite.jpg">
-			<img src="skaitykla.jpg.png" alt="skaitykla.jpg.">
-			<img src="biblioteka.jpg" alt="biblioteka.jpg">
-		</section>
+			<img src="bite.jpg.jpg" alt="bite.jpg" onclick="showInfo('Viešoji biblioteka, esanti Panevežio mieste, Lietuvoje. Biblioteka buvo įkurta 1923 metais kaip nedidelė skaitykla ir per metus augo iki vienos didžiausių ir svarbiausių viešųjų bibliotekų Lietuvoje. Esamas bibliotekos pastatas buvo pastatytas 1986 metais, sovietmečiu, o po Lietuvos nepriklausomybės atkūrimo, 1994 metais buvo pavadintas Lietuvos rašytojos ir aktyvistės Gabrielės Petkevičaitės-Bitės vardu..')">
+			<img src="skaitykla.jpg.png" alt="skaitykla.jpg" onclick="showInfo('Bibliotekoje yra keletas skaityklų, kuriose lankytojai gali skaityti knygas, laikraščius ir žurnalus. Yra taip pat speciali vaikų skaitykla, kurioje yra įvairių knygų ir žaidimų vaikams. Be to, biblioteka turi modernią kompiuterių ir interneto salę, kurioje lankytojai gali naudotis internetu ir dirbti su kompiuteriais..')">
+			<img src="biblioteka.jpg." alt="biblioteka.jpg" onclick="showInfo('Gabrielė Petkevičaitės-Bitės Viešoji biblioteka buvo pastatyta 1986 metais Sovietų laikais. Pastato architektūra yra unikali, dizainas apima didelę centrinę salę, kelias skaityklas ir erdvų fojė. Biblioteka buvo renovuota ankstyvaisiais 2000-aisiais, įskaitant modernizaciją ir paslaugų išplėtimą..')">
+		  </section>
+
+		  <script>
+			function showInfo(info) {
+			  window.open().document.write(info);
+			}
+			</script>
+
 
 		<section id="about-section" class="about">
 			<h3>Apie mus</h3>
@@ -214,3 +242,6 @@
                         <li>Jonas +37051112909</li>
                     </ul>
                 </section>
+				</html>
+
+			
